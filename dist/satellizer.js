@@ -729,7 +729,7 @@
             return this.$q(function (resolve, reject) {
                 angular.extend(_this.defaults, options);
                 var stateName = _this.defaults.name + '_state';
-                var _a = _this.defaults, name = _a.name, state = _a.state, popupOptions = _a.popupOptions, redirectUri = _a.redirectUri, responseType = _a.responseType;
+                var _a = _this.defaults, name = _a.name, state = _a.state, popupOptions = _a.popupOptions, redirectUri = _a.state ? _a.state : _a.redirectUri, responseType = _a.responseType;
                 if (typeof state === 'function') {
                     _this.SatellizerStorage.set(stateName, state());
                 }
